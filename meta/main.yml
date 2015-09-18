@@ -1,0 +1,18 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: revprez
+  description: Homebrew for Mac OS X
+  company: "Correlate Systems, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.6
+  platforms:
+  - name: GenericUNIX
+    versions:
+    - all
+    - any
+  categories:
+    - development
+    - system
+    - packaging
