@@ -5,7 +5,16 @@ Ansible Installs Homebrew on Mac OS X, and configures packages, taps, and cask a
 
 ## Requirements
 
-None.
+Currently, user must have installed Xcode on target machine by other means or mechanism.  User must also accept any licenses required to run Xcode without interruption.  License can usually be accepted via the command line.
+```
+    # Assuming Xcode is installed but has yet to run for the first time.
+
+    $ ssh <user>@<target-machine>
+    $ sudo xcodebuild
+
+    # Space through the License and type 'agree' when prompted.  
+    # Press enter and you're good to go.
+```
 
 ## Role Variables
 
