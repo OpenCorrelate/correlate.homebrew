@@ -71,6 +71,13 @@
 - name: Ensure configured homebrew packages are installed.
   homebrew: "name={{ item }} state=present"
   with_items: homebrew_installed_packages
+  when: homebrew_installed_packages
+
+- name: Ensure blacklisted homebrew packages are removed.
+  homebrew: "name={{ item }} state=absent"
+  with_items: homebrew_blacklisted_packages
+  when: homebrew_blacklisted_packages
+
 
 - name: Upgrade all homebrew packages (if configured).
   homebrew: update_homebrew=yes upgrade_all=yes
